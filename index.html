@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Even Or Odd Finder</h1>
+    <p>
+        Type In Your Number : <input type="number" placeholder="1, 2, 3, 4, 5" id="userInput">
+    </p>
+    <button onclick="EvenOdd()">Check</button>
+    <p>Your Number Is : <div id="Output"></div></p>
+    <script>
+
+    function EvenOdd(){
+        let inputNum= +document.querySelector("#userInput").value;
+        let result = (inputNum % 2  == 0) ? "even" : "odd";
+        document.querySelector("#Output").innerHTML =result;
+    }
+
+    </script>
+</body>
+</html>
