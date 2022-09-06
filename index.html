@@ -4,20 +4,70 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Even Or Odd Finder</title>
+    <style>
+        body{
+            height: 100%;
+            background-color: rgb(93,90,150);
+            background-image: linear-gradient(140deg, rgba(93,90,150,1) 0%, rgba(36,36,227,1) 50%, rgba(0,212,255,1) 100%);
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+        .container{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: cursive;
+            color: aliceblue;
+        }
+        .container1{
+            height: 50%; 
+            text-align: center;
+        }
+        .container1 > p {
+            color: aliceblue;
+            font-family: monospace;
+            font-weight: bold;
+            font-size: large;
+        }
+        button{
+            font-family: monospace;
+            font-weight: bold;
+        }
+        #Output{
+            width: 100px;
+            border-radius: 7px;
+            margin: 0 auto;
+            background-color: aliceblue;
+            color: rgb(93,90,150);
+            font-size: large;
+            font-weight: bold;
+        }
+        #userInput{
+            border-radius: 10px;
+            border: none;
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
-    <h1>Even Or Odd Finder</h1>
-    <p>
-        Type In Your Number : <input type="number" placeholder="1, 2, 3, 4, 5" id="userInput">
-    </p>
-    <button onclick="EvenOdd()">Check</button>
-    <p>Your Number Is : <div id="Output"></div></p>
+    <header class="container">
+        <h1>Even Or Odd Finder</h1>
+    </header>
+    <section class="container1">
+        <p>
+            Type In Your Number <br><br> <input type="number" placeholder="0" id="userInput">
+        </p>
+        <br>
+        <button onclick="EvenOdd()">Check</button>
+        <p>Your Number Is <div id="Output"> </div></p>
+    </section>    
+        
     <script>
 
     function EvenOdd(){
         let inputNum= +document.querySelector("#userInput").value;
-        let result = (inputNum % 2  == 0) ? "even" : "odd";
+        let result = (inputNum % 2  == 0) ? "Even" : "Odd";
         document.querySelector("#Output").innerHTML =result;
     }
 
